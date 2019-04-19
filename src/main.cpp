@@ -55,7 +55,6 @@
 #include "patcher/hooks_patcher_static.h"
 #include "plugin/dynamic_linking_defines.h"
 #include "myutils/mem_utils.h"
-#include "myutils/mocha.h"
 #include "myutils/libntfs.h"
 #include "myutils/libfat.h"
 #include "myutils/overlay_helper.h"
@@ -270,7 +269,8 @@ void Init_SD_USB() {
     }
     */
 
-     if((int res = mount_sd_fat("sd")) >= 0){
+     int res;
+     if((res = mount_sd_fat("sd")) >= 0){
         DEBUG_FUNCTION_LINE("mount_sd_fat success\n");
         gSDInitDone = WUPS_SDUSB_MOUNTED_OS_SD;
     }else{

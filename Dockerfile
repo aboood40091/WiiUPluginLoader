@@ -3,10 +3,6 @@ FROM wups/core:latest
 # clear portlibs. just in case.
 RUN rm -rf $DEVKITPRO/portlibs
 
-# Install devkitARM. Needed to build mocha.
-ENV DEVKITARM=${DEVKITPRO}/devkitARM
-COPY --from=devkitpro/devkitarm $DEVKITARM $DEVKITARM
-
 # Get dependencies
 COPY --from=wiiulegacy/dynamic_libs:0.1 /artifacts $DEVKITPRO/portlibs
 COPY --from=wiiulegacy/libiosuhax:0.3 /artifacts $DEVKITPRO/portlibs

@@ -1,4 +1,4 @@
-﻿[Nightly builds](https://github.com/Maschell/WiiUPluginLoader/releases) | [Issue Tracker](https://github.com/Maschell/WiiUPluginLoader/issues) | [Discussion](https://gbatemp.net/threads/wii-u-plugin-system.496659/) | [Discord](https://discord.gg/bZ2rep2) | [Wiki](https://maschell.github.io/WiiUPluginSystem/dev_overview.html)
+[Nightly builds](https://github.com/Maschell/WiiUPluginLoader/releases) | [Issue Tracker](https://github.com/Maschell/WiiUPluginLoader/issues) | [Discussion](https://gbatemp.net/threads/wii-u-plugin-system.496659/) | [Discord](https://discord.gg/bZ2rep2) | [Wiki](https://maschell.github.io/WiiUPluginSystem/dev_overview.html)
 
 # Wii U Plugin Loader [![Build Status](https://api.travis-ci.org/Maschell/WiiUPluginLoader.svg?branch=master)](https://travis-ci.org/Maschell/WiiUPluginLoader)
 
@@ -68,5 +68,5 @@ More information about wiiload and alternatives can be found here: http://wiibre
 # Credits
 Some files are based on brainslug by Chadderz:  
 https://github.com/Chadderz121/brainslug-wii  
-Much stuff also wouldn't be possible without dimok789. He made many great tools and homebrew this stuff in based on (Makefiles, Mocha, homebrew channel, udp logger, dynamic_libs etc.)  
+Much stuff also wouldn't be possible without dimok789. He made many great tools and homebrew this stuff in based on (Makefiles, homebrew channel, udp logger, dynamic_libs etc.)  
 Also thanks to everyone who made actual exploits.  
