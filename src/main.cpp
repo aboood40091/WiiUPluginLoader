@@ -238,6 +238,7 @@ void Init() {
 }
 
 void Init_SD_USB() {
+    /*
     int32_t res = IOSUHAX_Open(NULL);
     if(res < 0) {
         ExecuteIOSExploitWithDefaultConfig();
@@ -266,6 +267,14 @@ void Init_SD_USB() {
             gSDInitDone |= WUPS_SD_MOUNTED_LIBFAT;
             gSDInitDone |= WUPS_USB_MOUNTED_LIBFAT;
         }
+    }
+    */
+
+     if((int res = mount_sd_fat("sd")) >= 0){
+        DEBUG_FUNCTION_LINE("mount_sd_fat success\n");
+        gSDInitDone = WUPS_SDUSB_MOUNTED_OS_SD;
+    }else{
+        DEBUG_FUNCTION_LINE("mount_sd_fat failed %d\n",res);
     }
 }
 
