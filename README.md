@@ -1,6 +1,6 @@
-[Nightly builds](https://github.com/Maschell/WiiUPluginLoader/releases) | [Issue Tracker](https://github.com/Maschell/WiiUPluginLoader/issues) | [Discussion](https://gbatemp.net/threads/wii-u-plugin-system.496659/) | [Discord](https://discord.gg/bZ2rep2) | [Wiki](https://maschell.github.io/WiiUPluginSystem/dev_overview.html)
+[Nightly builds](https://github.com/aboood40091/WiiUPluginLoader/releases) | [Issue Tracker](https://github.com/aboood40091/WiiUPluginLoader/issues) | [Discussion](https://gbatemp.net/threads/wii-u-plugin-system.496659/) | [Discord](https://discord.gg/bZ2rep2) | [Wiki](https://maschell.github.io/WiiUPluginSystem/dev_overview.html)
 
-# Wii U Plugin Loader [![Build Status](https://api.travis-ci.org/Maschell/WiiUPluginLoader.svg?branch=master)](https://travis-ci.org/Maschell/WiiUPluginLoader)
+# Wii U Plugin Loader [![Build Status](https://api.travis-ci.org/aboood40091/WiiUPluginLoader.svg?branch=master)](https://travis-ci.org/aboood40091/WiiUPluginLoader)
 
 This is the plugin loader for the [WiiUPluginSystem](https://github.com/Maschell/WiiUPluginSystem).
 
