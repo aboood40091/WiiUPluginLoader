@@ -30,7 +30,7 @@ before_deploy:
 - commitLog="$(git log -1 --pretty=%B)"
 - commitMessage="$(echo -e "-\n" && echo "WiiUPluginLoader nightly build. Not a stable release. Expect bugs!\n Only use the plugins with the bundled loaded as they may not work on others." && echo -e "\nCommitlog:\n")"
 - git tag $GIT_TAG -a -m "$commitMessage" -m "$commitLog"
-- git push --quiet https://$GITHUBKEY@github.com/aboood40091/WiiUPluginLoader $GIT_TAG > /dev/null 2>&1
+- git push --quiet https://github.com/aboood40091/WiiUPluginLoader.git $GIT_TAG > /dev/null 2>&1
 
 deploy:
   provider: releases
