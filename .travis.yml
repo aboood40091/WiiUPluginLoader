@@ -24,13 +24,6 @@ before_deploy:
 - cp meta/* wiiu/apps/wiiupluginloader
 - cp wiiupluginloader.elf wiiu/apps/wiiupluginloader
 - zip -r WiiUPluginLoader_$versiontag.zip wiiu
-- git config --global user.email "builds@travis-ci.com"
-- git config --global user.name "Travis CI"
-- export GIT_TAG=WiiUPluginLoader-$versiontag
-- commitLog="$(git log -1 --pretty=%B)"
-- commitMessage="$(echo -e "-\n" && echo "WiiUPluginLoader nightly build. Not a stable release. Expect bugs!\n Only use the plugins with the bundled loaded as they may not work on others." && echo -e "\nCommitlog:\n")"
-- git tag $GIT_TAG -a -m "$commitMessage" -m "$commitLog"
-- git push --quiet https://github.com/aboood40091/WiiUPluginLoader.git $GIT_TAG > /dev/null 2>&1
 
 deploy:
   provider: releases
