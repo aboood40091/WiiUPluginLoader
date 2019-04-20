@@ -5,9 +5,7 @@
 extern "C" {
 #endif
 
-#include <stdint.h>
-
-int32_t mount_libfatAll();
+int mount_libfatAll();
 void unmount_libfat(const char * path);
 
 #ifdef __cplusplus
