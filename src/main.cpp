@@ -269,6 +269,9 @@ void Init_SD_USB() {
     }
     */
 
+    if (gSDInitDone & WUPS_SDUSB_MOUNTED_OS_SD)
+        return;
+
      int res;
      if((res = mount_sd_fat("sd")) >= 0){
         DEBUG_FUNCTION_LINE("mount_sd_fat success\n");
