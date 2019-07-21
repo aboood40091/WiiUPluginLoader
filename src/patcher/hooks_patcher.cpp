@@ -9,8 +9,11 @@
 #include "utils.h"
 #include "mymemory/memory_mapping.h"
 
+uint32_t prevAppStatus;
+
 DECL(uint32_t, ProcUIProcessMessages, uint32_t u) {
     uint32_t res = real_ProcUIProcessMessages(u);
+    prevAppStatus = gAppStatus;
     // Only continue if we are in the "right" application.
     if(res != gAppStatus && OSGetTitleID() == gGameTitleID) {
         DEBUG_FUNCTION_LINE("App status changed from %d to %d \n",gAppStatus,res);
@@ -19,7 +22,8 @@ DECL(uint32_t, ProcUIProcessMessages, uint32_t u) {
         if(gAppStatus == WUPS_APP_STATUS_CLOSED) {
             CallHook(WUPS_LOADER_HOOK_ENDING_APPLICATION);
             ConfigUtils::saveConfigToSD();
-            DeInit();
+            if (prevAppStatus != WUPS_APP_STATUS_FOREGROUND)
+                DeInit();
         }
     }
 
