@@ -16,7 +16,7 @@ DECL(uint32_t, ProcUIProcessMessages, uint32_t u) {
         DEBUG_FUNCTION_LINE("App status changed from %d to %d \n",gAppStatus,res);
         gAppStatus = res;
         CallHook(WUPS_LOADER_HOOK_APP_STATUS_CHANGED);
-        if(gAppStatus == WUPS_APP_STATUS_CLOSED) {
+        if(gAppStatus == 3) {
             CallHook(WUPS_LOADER_HOOK_ENDING_APPLICATION);
             ConfigUtils::saveConfigToSD();
             DeInit();
